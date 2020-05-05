@@ -1,0 +1,21 @@
+- name: Install packages.
+  package:
+    name: python3-setuptools
+
+- name: configure pip index
+  template:
+    src: "templates/pip.conf.j2"
+    dest: "/etc/pip.conf"
+    mode: 0644
+  when:
+    - python_global_index_url is defined
+
+- name: Install setuptools
+  pip:
+    name: setuptools
+    state: latest
+
+- name: Upgrade pip
+  pip:
+    name: pip
+    state: latest
