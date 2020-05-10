@@ -10,12 +10,12 @@
   when:
     - python_global_index_url is defined
 
-- name: Install setuptools
+- name: Install setuptools # noqa 403
   pip:
     name: setuptools
     state: latest
 
-- name: Upgrade pip
+- name: Upgrade pip # noqa 403
   pip:
     name: pip
     state: latest
