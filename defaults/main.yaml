@@ -1,2 +1,2 @@
 # global index url for pip
-python_global_index_url: "https://pypi.python.org/simple"
+# python_global_index_url: "https://pypi.python.org/simple"
