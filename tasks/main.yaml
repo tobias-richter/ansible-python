@@ -1,10 +1,12 @@
 - name: Install packages.
   package:
-    name: python3-setuptools
+    name:
+    - python3-setuptools
+    - python3-pip
 
-- name: configure pip index
+- name: configure pip.
   template:
-    src: "templates/pip.conf.j2"
+    src: "templates/etc/pip.conf.j2"
     dest: "/etc/pip.conf"
     mode: 0644
   when:
@@ -19,3 +21,7 @@
   pip:
     name: pip
     state: latest
+
+- name: Install pip packages.
+  pip:
+    name: "{{ python_pip_packages }}"
