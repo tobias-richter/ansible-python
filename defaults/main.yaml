@@ -1,10 +1,8 @@
 # global index url for pip
 # python_global_index_url: "https://pypi.python.org/simple"
 
-# python_global_trusted_host
-
-python_pip_packages: []
-# python_global_index_url: "https://pypi.python.org/simple"
+# Use this configuration option when your pypi mirror has no valid https certificate
+# python_global_trusted_host: pypi.python.org
 
 # Python os packages to install
 python_os_packages:
@@ -17,3 +15,6 @@ python_pip_package_pip: pip>=20
 
 # The setups tools package and version to install
 python_pip_package_setuptools: setuptools>=47
+
+# List of pip packages to install
+python_pip_packages: []

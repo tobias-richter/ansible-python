@@ -19,6 +19,8 @@
   pip:
     name: "{{ python_pip_package_pip }}"
     executable: pip3
+
 - name: Install pip packages.
   pip:
     name: "{{ python_pip_packages }}"
+    executable: pip3
