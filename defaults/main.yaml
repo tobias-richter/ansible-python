@@ -1,6 +1,11 @@
 # global index url for pip
 # python_global_index_url: "https://pypi.python.org/simple"
 
+# python_global_trusted_host
+
+python_pip_packages: []
+# python_global_index_url: "https://pypi.python.org/simple"
+
 # Python os packages to install
 python_os_packages:
   - python3

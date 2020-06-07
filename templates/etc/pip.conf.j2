@@ -1,0 +1,5 @@
+[global]
+{% if python_global_trusted_host is defined %}
+trusted-host = {{ python_global_trusted_host }}
+{% endif %}
+index-url = {{ python_global_index_url }}
