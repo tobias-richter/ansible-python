@@ -9,3 +9,10 @@ galaxy_info:
     - name: Debian
       versions:
         - Buster
+        - Stretch
+    - name: Ubuntu
+      versions:
+        - Bionic
+        - Focal
+
+  tags:

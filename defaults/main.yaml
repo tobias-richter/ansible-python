@@ -1,2 +1,14 @@
 # global index url for pip
 # python_global_index_url: "https://pypi.python.org/simple"
+
+# Python os packages to install
+python_os_packages:
+  - python3
+  - python3-setuptools
+  - python3-pip
+
+# The pip package and version to install
+python_pip_package_pip: pip>=20
+
+# The setups tools package and version to install
+python_pip_package_setuptools: setuptools>=47

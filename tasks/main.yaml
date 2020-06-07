@@ -1,6 +1,6 @@
 - name: Install packages.
   package:
-    name: python3-setuptools
+    name: "{{ python_os_packages }}"
 
 - name: configure pip index
   template:
@@ -10,12 +10,12 @@
   when:
     - python_global_index_url is defined
 
-- name: Install setuptools # noqa 403
+- name: Update setuptools.
   pip:
-    name: setuptools
-    state: latest
+    name: "{{ python_pip_package_setuptools }}"
+    executable: pip3
 
-- name: Upgrade pip # noqa 403
+- name: Update pip.
   pip:
-    name: pip
-    state: latest
+    name: "{{ python_pip_package_pip }}"
+    executable: pip3
