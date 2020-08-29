@@ -9,6 +9,8 @@ python_os_packages:
   - python3
   - python3-setuptools
   - python3-pip
+  - python3-dev
+  - build-essential
 
 # The pip package and version to install
 python_pip_package_pip: pip>=20
