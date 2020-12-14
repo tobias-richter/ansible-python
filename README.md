@@ -1,6 +1,6 @@
 # tobias_richter.python
 
-[![Build Status](https://travis-ci.org/tobias-richter/ansible-python.svg?branch=master)](https://travis-ci.org/tobias-richter/ansible-python)
+[![Build Status](https://github.com/tobias-richter/ansible-python/workflows/CI/badge.svg)](https://github.com/tobias-richter/ansible-python/actions)
 
 This role setups python3 and installed setuptools and python with the
 configured versions.
