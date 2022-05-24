@@ -1,3 +1,10 @@
+- name: Include distribution specific variables.
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}_{{ ansible_lsb.major_release }}.yml"
+    - "{{ ansible_distribution }}.yml"
+    - "default.yml"
+
 - name: Install packages.
   package:
     name: "{{ python_os_packages }}"
