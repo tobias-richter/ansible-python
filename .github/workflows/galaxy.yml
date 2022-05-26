@@ -14,7 +14,7 @@ jobs:
     steps:
 
     - name: import
-      uses: robertdebock/galaxy-action@affc5472cd0b08f64a51eafba49b08898c1bbeb8
+      uses: robertdebock/galaxy-action@1.2.1
       with:
         galaxy_api_key: ${{ secrets.GALAXY_API_KEY }}
 
