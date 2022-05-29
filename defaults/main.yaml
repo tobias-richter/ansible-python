@@ -7,8 +7,6 @@
 # Python os packages to install
 # see vars/ for defined packages
 
-
-
 # The pip package and version to install
 python_pip_package_pip: pip>=20.3.1
 
