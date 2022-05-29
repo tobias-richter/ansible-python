@@ -39,7 +39,7 @@ jobs:
 
       - name: ansible-lint
         # replace "master" with any valid ref
-        uses: ansible/ansible-lint-action@594402913bf720b74acd144d220f25693c61e4fa
+        uses: ansible-community/ansible-lint-action@v6.2.1
         with:
           targets: |
             ${{ env.ROLE_NAME }}
