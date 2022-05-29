@@ -8,8 +8,9 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - Buster
-        - Stretch
+        - 9
+        - 10
+        - 11
     - name: Ubuntu
       versions:
         - Bionic
