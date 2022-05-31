@@ -8,12 +8,12 @@ galaxy_info:
   platforms:
     - name: Debian
       versions:
-        - Stretch
-        - Buster
-        - Bullseye
+        - stretch
+        - buster
+        - bullseye
     - name: Ubuntu
       versions:
-        - Bionic
-        - Focal
+        - bionic
+        - focal
 
   tags:
