@@ -1,16 +1,16 @@
 - name: Include distribution specific variables.
-  include_vars: "{{ item }}"
+  ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
     - "{{ ansible_distribution }}_{{ ansible_lsb.major_release }}.yml"
     - "{{ ansible_distribution }}.yml"
     - "default.yml"
 
 - name: Install packages.
-  package:
+  ansible.builtin.package:
     name: "{{ python_os_packages }}"
 
 - name: configure pip.
-  template:
+  ansible.builtin.template:
     src: "templates/etc/pip.conf.j2"
     dest: "/etc/pip.conf"
     mode: 0644
@@ -18,16 +18,16 @@
     - python_global_index_url is defined
 
 - name: Update setuptools.
-  pip:
+  ansible.builtin.pip:
     name: "{{ python_pip_package_setuptools }}"
     executable: pip3
 
 - name: Update pip.
-  pip:
+  ansible.builtin.pip:
     name: "{{ python_pip_package_pip }}"
     executable: pip3
 
 - name: Install pip packages.
-  pip:
+  ansible.builtin.pip:
     name: "{{ python_pip_packages }}"
     executable: pip3
