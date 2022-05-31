@@ -16,4 +16,4 @@ galaxy_info:
         - bionic
         - focal
 
-  tags:
+  galaxy_tags: []
