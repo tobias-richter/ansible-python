@@ -1,8 +1,16 @@
+- debug:
+    var: ansible_distribution_major_version
+    verbosity: 1
+
+- debug:
+    var: ansible_distribution
+    verbosity: 1
+
 - name: Include distribution specific variables.
   ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
-    - "{{ ansible_distribution }}_{{ ansible_lsb.major_release }}.yml"
-    - "{{ ansible_distribution }}.yml"
+    - "{{ ansible_distribution | lower }}_{{ ansible_distribution_major_version }}.yml"
+    - "{{ ansible_distribution | lower }}.yml"
     - "default.yml"
 
 - name: Install packages.
@@ -21,11 +29,13 @@
   ansible.builtin.pip:
     name: "{{ python_pip_package_setuptools }}"
     executable: pip3
+  when: python_update_setuptools
 
 - name: Update pip.
   ansible.builtin.pip:
     name: "{{ python_pip_package_pip }}"
     executable: pip3
+  when: python_update_pip
 
 - name: Install pip packages.
   ansible.builtin.pip:

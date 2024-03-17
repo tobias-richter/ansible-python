@@ -15,3 +15,9 @@ python_pip_package_setuptools: setuptools>=47
 
 # List of pip packages to install
 python_pip_packages: []
+
+# Controls if setuptool will be updated
+python_update_setuptools: yes
+
+# Controls if pip will be updated
+python_update_pip: yes
